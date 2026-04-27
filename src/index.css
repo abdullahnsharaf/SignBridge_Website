@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0D0D1A;
+  color: white;
+}
+
+[dir="rtl"] .font-arabic {
+  font-family: 'Cairo', sans-serif;
+}
