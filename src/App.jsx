@@ -2,6 +2,7 @@ import { LanguageProvider } from "./context/LanguageContext";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Product from "./components/Product";
+import Demo from "./components/Demo";
 
 export default function App() {
   return (
@@ -10,8 +11,9 @@ export default function App() {
         <Navbar />
         <Hero />
         <Product />
+        <Demo />
 
-        {["demo","features","about","team","contact"].map((id) => (
+        {["features","about","team","contact"].map((id) => (
           <section key={id} id={id} className="min-h-screen flex items-center justify-center">
             <p className="text-white/20 text-2xl font-bold uppercase tracking-widest">{id}</p>
           </section>
