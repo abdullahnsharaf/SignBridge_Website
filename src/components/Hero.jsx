@@ -101,9 +101,9 @@ export default function Hero() {
             <motion.div
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
-              className={`mb-6 flex ${isRTL ? "justify-end" : "justify-start"}`}
+              className={`mb-6 flex w-full ${isRTL ? "justify-end" : "justify-start"}`}
             >
-              <div className="flex flex-wrap gap-2 px-4 py-2 rounded-full border border-secondary/30 bg-secondary/10 backdrop-blur-md">
+              <div className="flex flex-wrap gap-2 py-2 rounded-full border border-secondary/30 bg-secondary/10 backdrop-blur-md">
                 {c.badge.map((item) => (
                   <span key={item} className="text-xs text-secondary font-semibold">
                     • {item}
