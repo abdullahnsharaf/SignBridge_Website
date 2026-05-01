@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Play, Wifi, Shield, Zap } from "lucide-react";
 import { useLang } from "../context/LanguageContext";
+import deviceImage from "../assets/device.png";
 
 const content = {
   en: {
@@ -15,11 +16,6 @@ const content = {
       { icon: <Shield size={14} />, label: "Private & Secure" },
       { icon: <Zap size={14} />, label: "Real-Time Output" },
     ],
-    deviceText1: "Real-Time",
-    deviceText2: "Sign Language",
-    deviceText3: "to Speech",
-    signMode: "Sign Mode",
-    voiceMode: "Voice Mode",
   },
   ar: {
     badges: ["يعمل بدون إنترنت", "ذكاء اصطناعي فوري", "آمن وخاص"],
@@ -33,11 +29,6 @@ const content = {
       { icon: <Shield size={14} />, label: "آمن وخاص" },
       { icon: <Zap size={14} />, label: "استجابة فورية" },
     ],
-    deviceText1: "ترجمة الإشارة",
-    deviceText2: "إلى",
-    deviceText3: "صوت",
-    signMode: "وضع الإشارة",
-    voiceMode: "وضع الصوت",
   },
 };
 
@@ -121,71 +112,35 @@ function ParticleDots() {
   );
 }
 
-/* ─── ORIGINAL GOOD DEVICE MOCKUP ─── */
-function DeviceMockup({ lang }) {
-  const c = content[lang];
+/* ─── REAL DEVICE PHOTO ─── */
+function DeviceMockup() {
   return (
     <motion.div
-      animate={{ y: [0, -12, 0] }}
-      transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-      className="relative w-64 md:w-80 mx-auto"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, delay: 0.3 }}
+      className="relative w-full mx-auto"
+      style={{ maxWidth: "700px" }}
     >
-      {/* Glow platform */}
-      <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-48 h-6 bg-primary/40 blur-2xl rounded-full" />
-      <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-64 h-3 bg-secondary/20 blur-xl rounded-full" />
+      {/* Multi-layer glow behind device */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-primary/30 blur-3xl rounded-full" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] bg-secondary/20 blur-2xl rounded-full" />
+      <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-3/4 h-8 bg-primary/50 blur-2xl rounded-full" />
 
-      {/* Device body */}
-      <div className="relative bg-gradient-to-b from-gray-200 to-gray-300 rounded-3xl p-3 shadow-2xl border-2 border-white/20">
-        {/* Camera */}
-        <div className="flex justify-center mb-2">
-          <div className="w-10 h-10 rounded-full bg-gray-800 border-4 border-gray-600 flex items-center justify-center shadow-inner">
-            <div className="w-4 h-4 rounded-full bg-gray-900 border border-gray-700" />
-          </div>
-        </div>
-
-        {/* Screen */}
-        <div className="bg-bg rounded-2xl p-4 min-h-[160px] border border-primary/30 shadow-[inset_0_0_20px_rgba(108,61,232,0.2)]">
-          {/* Status bar */}
-          <div className="flex items-center justify-between mb-3">
-            <div className="flex items-center gap-1">
-              <span className="text-[8px] text-white/60 font-medium">SignBridge</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <div className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse" />
-              <span className="text-[8px] text-secondary">Active</span>
-            </div>
-          </div>
-
-          {/* Display text */}
-          <div className={`text-center mb-4 ${lang === "ar" ? "font-arabic" : ""}`}>
-            <p className="text-white text-sm font-bold leading-snug">{c.deviceText1}</p>
-            <p className="text-white text-sm font-bold">{c.deviceText2}</p>
-            <p className="text-secondary text-sm font-bold">{c.deviceText3}</p>
-          </div>
-
-          {/* Mode buttons */}
-          <div className="flex gap-2">
-            <button className={`flex-1 bg-primary/80 rounded-lg py-1.5 text-[9px] text-white font-semibold flex items-center justify-center gap-1 ${lang === "ar" ? "font-arabic" : ""}`}>
-              <span>✋</span> {c.signMode}
-            </button>
-            <button className={`flex-1 bg-white/10 rounded-lg py-1.5 text-[9px] text-white/70 font-semibold flex items-center justify-center gap-1 ${lang === "ar" ? "font-arabic" : ""}`}>
-              <span>🎤</span> {c.voiceMode}
-            </button>
-          </div>
-        </div>
-
-        {/* Speaker grille */}
-        <div className="flex justify-center gap-1 mt-2">
-          {Array.from({ length: 8 }).map((_, i) => (
-            <div key={i} className="w-1 h-3 bg-gray-500/60 rounded-full" />
-          ))}
-        </div>
-
-        {/* Bottom logo */}
-        <div className="flex items-center justify-center gap-1 mt-2">
-          <span className="text-[9px] text-gray-600 font-bold">SignBridge</span>
-        </div>
-      </div>
+      <motion.div
+        animate={{ y: [0, -14, 0] }}
+        transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
+        className="relative"
+      >
+        <img
+          src={deviceImage}
+          alt="SignBridge Device"
+          className="w-full h-auto object-contain relative z-10"
+          style={{
+            filter: "drop-shadow(0 25px 50px rgba(108,61,232,0.4)) drop-shadow(0 0 40px rgba(45,191,160,0.2))",
+          }}
+        />
+      </motion.div>
     </motion.div>
   );
 }
@@ -357,10 +312,11 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* RIGHT: Device */}
-          <div className={`flex justify-center items-center relative ${isRTL ? "lg:order-1" : "lg:order-2"}`}>
-            <DeviceMockup lang={lang} />
-          </div>
+          {/* RIGHT: Device Photo */}
+          {/* RIGHT: Device Photo */}
+<div className={`flex justify-center items-center relative w-full ${isRTL ? "lg:order-1" : "lg:order-2"}`}>
+  <DeviceMockup />
+</div>
         </div>
       </div>
     </section>
