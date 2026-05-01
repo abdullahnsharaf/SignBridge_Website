@@ -49,7 +49,7 @@ const team = {
         bio: "Raspberry Pi 5 setup, camera integration, system pipeline & project management.",
       },
       ar: {
-        name: "خالد با طيس",
+        name: "خالد باتيس",
         role: "قائد العتاد والتكامل",
         bio: "إعداد Raspberry Pi 5، تكامل الكاميرا، بناء مسار النظام بالكامل وإدارة المشروع.",
       },
