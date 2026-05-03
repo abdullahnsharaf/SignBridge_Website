@@ -10,9 +10,9 @@ import {
   Trophy,
 } from "lucide-react";
 import { useLang } from "../context/LanguageContext";
-import logoImg from "../assets/signbridge_logo_transparent.png";
-import taylorsLogo from "../assets/About/taylorsLogo.png";
-import darbLogo from "../assets/about/darbLogo.png";
+const logoImg = "/assets/signbridge_logo_transparent.png";
+const taylorsLogo = "/assets/about/taylorsLogo.png";
+const darbLogo = "/assets/about/darbLogo.png";
 const INSTAGRAM_URL = "https://instagram.com/sign_bridge.ar";
 const INSTAGRAM_HANDLE = "@sign_bridge.ar";
 

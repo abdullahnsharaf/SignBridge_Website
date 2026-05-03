@@ -9,12 +9,12 @@ import {
 import { useLang } from "../context/LanguageContext";
 
 // ─── REAL ASSETS ────────────────────────────────────
-import storyPhoto from "../assets/about/storyPhoto.png";
-import sdg3Logo from "../assets/about/sdg3Logo.png";
-import sdg4Logo from "../assets/about/sdg4Logo.png";
-import sdg10Logo from "../assets/about/sdg10Logo.png";
-import taylorsLogo from "../assets/about/taylorsLogo.png";
-import darbLogo from "../assets/about/darbLogo.png";
+const storyPhoto = "/assets/about/storyPhoto.png";
+const sdg3Logo = "/assets/about/sdg3Logo.png";
+const sdg4Logo = "/assets/about/sdg4Logo.png";
+const sdg10Logo = "/assets/about/sdg10Logo.png";
+const taylorsLogo = "/assets/about/taylorsLogo.png";
+const darbLogo = "/assets/about/darbLogo.png";
 
 const GitHubIcon = ({ size = 16 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
