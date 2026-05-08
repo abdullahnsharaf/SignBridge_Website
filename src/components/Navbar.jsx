@@ -3,7 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Play, ChevronDown } from "lucide-react";
 import { useLang } from "../context/LanguageContext";
 import logo from "../assets/signbridge_logo_transparent.png";
-const navLinks = ["home", "product", "demo", "features", "about", "team", "contact"];
+
+const navLinks = ["home", "product", "demo", "features", "about", "vision", "team", "contact"];
 
 export default function Navbar() {
   const { lang, t, toggleLang } = useLang();

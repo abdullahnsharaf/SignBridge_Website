@@ -5,6 +5,7 @@ import Product from "./components/Product";
 import Demo from "./components/Demo";
 import Features from "./components/Features";
 import About from "./components/About";
+import Vision from "./components/Vision";
 import Team from "./components/Team";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -19,6 +20,7 @@ export default function App() {
         <Demo />
         <Features />
         <About />
+        <Vision />     {/* ← NEW */}
         <Team />
         <Contact />
         <Footer />
