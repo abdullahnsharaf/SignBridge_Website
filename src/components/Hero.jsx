@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Play, Wifi, Shield, Zap } from "lucide-react";
 import { useLang } from "../context/LanguageContext";
-const deviceImage = "/assets/device.png";
+import deviceImage from "../assets/device.png";
 
 const content = {
   en: {

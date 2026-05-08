@@ -13,11 +13,11 @@ import {
 import { useLang } from "../context/LanguageContext";
 
 // ─── Team member photos ─────────────────────────────
-const khaledPhoto = "/assets/team/khaled-waleed.jpeg";
-const abdullahWaleedPhoto = "/assets/team/abdullah-waleed.jpeg";
-const abdullahSharafPhoto = "/assets/team/abdullah-sharaf.png";
-const abdulqaderPhoto = "/assets/team/abdulqader.jpeg";
-const ashrafPhoto = "/assets/team/ashraf.jpeg";
+import khaledPhoto from "../assets/team/khaled-waleed.jpeg";
+import abdullahWaleedPhoto from "../assets/team/abdullah-waleed.jpeg";
+import abdullahSharafPhoto from "../assets/team/abdullah-sharaf.png";
+import abdulqaderPhoto from "../assets/team/abdulqader.jpeg";
+import ashrafPhoto from "../assets/team/ashraf.jpeg";
 
 // ─── Brand icons (custom SVGs) ──────────────────────
 const GitHubIcon = ({ size = 16 }) => (

@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Play, ChevronDown } from "lucide-react";
 import { useLang } from "../context/LanguageContext";
-const logo = "/assets/signbridge_logo_transparent.png";
-
+import logo from "../assets/signbridge_logo_transparent.png";
 const navLinks = ["home", "product", "demo", "features", "about", "team", "contact"];
 
 export default function Navbar() {
